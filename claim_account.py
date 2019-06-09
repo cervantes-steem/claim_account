@@ -34,7 +34,7 @@ def setup_logging(
 
 def claim_account(steemd_instance, logger):
 
-        account = Account(CREATOR_ACCOUNT)
+        account = Account(CREATOR_ACCOUNT, steem_instance = steemd_instance)
         rc_mana_old = account.get_rc_manabar()
         rc_mana_old_grc = rc_mana_old["current_mana"] / 1e9
         logger.info("Current_mana: %f" % rc_mana_old_grc)
